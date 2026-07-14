@@ -2,6 +2,8 @@
 
 De officiële website voor Bjorn Stuyvaerts seriële verhaal **Wereld van Resonantie**.
 
+Website: https://chucky858.github.io/wereldvanresonantie/
+
 ## Overzicht
 
 - `index.html` — startpagina en archief
