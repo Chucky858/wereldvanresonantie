@@ -1,0 +1,68 @@
+.episodeList > a,
+.episodeList > div {
+  display: grid;
+  grid-template-columns: 55px 1fr auto;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  opacity: .55;
+}
+
+.episodeList > a.available { opacity: 1; }
+.readButton { text-decoration: none; }
+.subscribe > p { max-width: 520px; color: var(--muted); line-height: 1.7; }
+
+.reading-page {
+  background:
+    radial-gradient(circle at 50% 0, rgba(73,213,226,.08), transparent 35%),
+    var(--ink);
+}
+
+.reading-header {
+  min-height: 88px;
+  padding: 20px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.reading-header > a:last-child { color: var(--amber); font-size: 13px; }
+
+.chapter {
+  width: min(760px, 86vw);
+  margin: 0 auto;
+  padding: 110px 0 130px;
+}
+
+.chapter h1 {
+  font-size: clamp(58px, 8vw, 96px);
+  line-height: .92;
+  letter-spacing: -.035em;
+  margin: 18px 0 28px;
+}
+
+.chapter-meta { color: var(--muted); font-size: 13px; letter-spacing: .05em; }
+.chapter-divider { color: var(--cyan); text-align: center; font-size: 42px; margin: 55px 0; }
+.chapter-note { border-left: 2px solid var(--amber); padding: 18px 24px; background: #11191c; color: var(--muted); }
+.chapter > p:not(.eyebrow):not(.chapter-meta):not(.chapter-note) { font: 23px/1.85 'Cormorant Garamond', serif; color: #d0d2ca; }
+.dropcap:first-letter { float: left; font-size: 92px; line-height: .75; padding: 12px 12px 0 0; color: var(--cyan); }
+.coming-soon { margin: 70px 0; padding: 36px; text-align: center; border: 1px solid var(--line); background: #0e1518; }
+.coming-soon span { color: var(--amber); text-transform: uppercase; letter-spacing: .18em; font-size: 11px; }
+.coming-soon p { font-family: 'Cormorant Garamond', serif; font-size: 24px; }
+.chapter-nav { display: flex; justify-content: space-between; gap: 20px; padding-top: 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.chapter-nav a { color: var(--cyan); }
+
+.error-page { min-height: 100vh; display: grid; place-items: center; text-align: center; }
+.error-page main { padding: 40px; }
+.error-page h1 { font-size: clamp(58px, 9vw, 110px); }
+.error-page p:not(.eyebrow) { color: var(--muted); margin-bottom: 40px; }
+.error-page .primary { margin: 0 auto; min-width: 0; }
+
+@media (max-width: 800px) {
+  .reading-header { align-items: flex-start; gap: 18px; }
+  .reading-header .brand { font-size: 14px; }
+  .chapter { padding-top: 75px; }
+  .chapter-nav { flex-direction: column; }
+  .subscribe > p { margin-top: 25px; }
+}
